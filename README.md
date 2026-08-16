@@ -2,7 +2,7 @@
 
 ## 🛍️ Project Overview
 
-**Nostra** is a modern and responsive e-commerce website built using **HTML, CSS, and JavaScript**. The website provides a clean shopping experience with multiple pages, product collections, search functionality, category filtering, and a responsive design that works across desktop, tablet, and mobile devices.
+**BOSS-FASHION STORE** is a modern and responsive e-commerce website built using **HTML, CSS, and JavaScript**. The website provides a clean shopping experience with multiple pages, product collections, search functionality, category filtering, and a responsive design that works across desktop, tablet, and mobile devices.
 
 ## 🌐 Live Demo
 
