@@ -7,8 +7,7 @@
 ## 🌐 Live Demo
 
 **Nostra Website:**
-https://ajay9677.github.io/BOSS-FASHION%20STORE/index.html
-
+ https://ajay9677.github.io/boss/
 ## 📄 Pages Included
 
 ### 🏠 Home Page
