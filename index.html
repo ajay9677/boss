@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOSS-FASHION STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">BOSS-FASHION STORE</div>
+
+    <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-small">NEW SEASON COLLECTION</p>
+        <h1>Style That Speaks<br>For You</h1>
+        <p>Discover premium fashion, footwear and accessories at amazing prices.</p>
+        <a href="collections.html" class="btn">Shop Now</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+             alt="Fashion Store">
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <span>🚚</span>
+        <h3>Free Delivery</h3>
+        <p>Free delivery on orders above ₹999.</p>
+    </div>
+
+    <div class="feature">
+        <span>💳</span>
+        <h3>Secure Payment</h3>
+        <p>100% secure payment options.</p>
+    </div>
+
+    <div class="feature">
+        <span>🔄</span>
+        <h3>Easy Returns</h3>
+        <p>7 days easy return policy.</p>
+    </div>
+
+    <div class="feature">
+        <span>⭐</span>
+        <h3>Premium Quality</h3>
+        <p>High quality products for everyone.</p>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="section-title">
+        <p>EXPLORE</p>
+        <h2>Shop By Category</h2>
+    </div>
+
+    <div class="category-grid">
+        <a href="collections.html?category=Shoes" class="category-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                 alt="Shoes">
+            <div>
+                <h3>Shoes</h3>
+                <span>Shop Now →</span>
+            </div>
+        </a>
+
+        <a href="collections.html?category=T-Shirts" class="category-card">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                 alt="T-Shirts">
+            <div>
+                <h3>T-Shirts</h3>
+                <span>Shop Now →</span>
+            </div>
+        </a>
+
+        <a href="collections.html?category=Jackets" class="category-card">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+                 alt="Jackets">
+            <div>
+                <h3>Jackets</h3>
+                <span>Shop Now →</span>
+            </div>
+        </a>
+
+        <a href="collections.html?category=Accessories" class="category-card">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80"
+                 alt="Accessories">
+            <div>
+                <h3>Accessories</h3>
+                <span>Shop Now →</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="offer">
+    <div>
+        <p>LIMITED TIME OFFER</p>
+        <h2>Up To 50% Off</h2>
+        <p>Upgrade your wardrobe with our latest collection.</p>
+        <a href="collections.html" class="btn light-btn">Explore Collection</a>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Join Our Newsletter</h2>
+    <p>Get updates about new collections and exclusive offers.</p>
+
+    <form onsubmit="subscribeNewsletter(event)">
+        <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+
+    <p id="subscribeMessage"></p>
+</section>
+
+<footer class="footer">
+    <div>
+        <h2>NOSTRA</h2>
+        <p>Your destination for modern fashion and lifestyle.</p>
+    </div>
+
+    <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+        <h3>Follow Us</h3>
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+</footer>
+
+<div class="copyright">
+    © 2026 Nostra. All Rights Reserved.
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

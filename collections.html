@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra - Collections</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">NOSTRA</div>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="collections.html" class="active">Collections</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="cart">🛒 <span id="cartCount">0</span></div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<section class="page-banner">
+    <p>OUR PRODUCTS</p>
+    <h1>Collections</h1>
+    <p>Find your perfect style from our latest collection.</p>
+</section>
+
+<section class="shop-section">
+
+    <div class="shop-tools">
+
+        <div class="search-box">
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search products..."
+                   onkeyup="searchProducts()">
+            <span>🔍</span>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active-filter" onclick="filterProducts('All', this)">
+                All
+            </button>
+
+            <button class="filter-btn" onclick="filterProducts('Shoes', this)">
+                Shoes
+            </button>
+
+            <button class="filter-btn" onclick="filterProducts('T-Shirts', this)">
+                T-Shirts
+            </button>
+
+            <button class="filter-btn" onclick="filterProducts('Jackets', this)">
+                Jackets
+            </button>
+
+            <button class="filter-btn" onclick="filterProducts('Accessories', this)">
+                Accessories
+            </button>
+        </div>
+
+    </div>
+
+    <div class="product-grid" id="productGrid">
+
+        <div class="product-card" data-category="Shoes" data-name="Classic Red Sneakers">
+            <div class="product-image">
+                <span class="badge">NEW</span>
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                     alt="Classic Red Sneakers">
+            </div>
+            <div class="product-info">
+                <p>Shoes</p>
+                <h3>Classic Red Sneakers</h3>
+                <div class="rating">★★★★★</div>
+                <strong>₹1,999</strong>
+                <button onclick="addToCart('Classic Red Sneakers')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="Shoes" data-name="White Running Shoes">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
+                     alt="White Running Shoes">
+            </div>
+            <div class="product-info">
+                <p>Shoes</p>
+                <h3>White Running Shoes</h3>
+                <div class="rating">★★★★☆</div>
+                <strong>₹2,499</strong>
+                <button onclick="addToCart('White Running Shoes')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="Shoes" data-name="Black Sports Shoes">
+            <div class="product-image">
+                <span class="badge sale">SALE</span>
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80"
+                     alt="Black Sports Shoes">
+            </div>
+            <div class="product-info">
+                <p>Shoes</p>
+                <h3>Black Sports Shoes</h3>
+                <div class="rating">★★★★★</div>
+                <strong>₹2,199</strong>
+                <button onclick="addToCart('Black Sports Shoes')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="Shoes" data-name="Casual Sneakers">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80"
+                     alt="Casual Sneakers">
+            </div>
+            <div class="product-info">
+                <p>Shoes</p>
+                <h3>Casual Sneakers</h3>
+                <div class="rating">★★★★☆</div>
+                <strong>₹1,799</strong>
+                <button onclick="addToCart('Casual Sneakers')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="T-Shirts" data-name="Premium White T-Shirt">
+            <div class="product-image">
+                <span class="badge">NEW</span>
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                     alt="Premium White T-Shirt">
+            </div>
+            <div class="product-info">
+                <p>T-Shirts</p>
+                <h3>Premium White T-Shirt</h3>
+                <div class="rating">★★★★★</div>
+                <strong>₹799</strong>
+                <button onclick="addToCart('Premium White T-Shirt')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="T-Shirts" data-name="Black Oversized T-Shirt">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=600&q=80"
+                     alt="Black Oversized T-Shirt">
+            </div>
+            <div class="product-info">
+                <p>T-Shirts</p>
+                <h3>Black Oversized T-Shirt</h3>
+                <div class="rating">★★★★☆</div>
+                <strong>₹899</strong>
+                <button onclick="addToCart('Black Oversized T-Shirt')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="T-Shirts" data-name="Blue Casual T-Shirt">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=600&q=80"
+                     alt="Blue Casual T-Shirt">
+            </div>
+            <div class="product-info">
+                <p>T-Shirts</p>
+                <h3>Blue Casual T-Shirt</h3>
+                <div class="rating">★★★★★</div>
+                <strong>₹749</strong>
+                <button onclick="addToCart('Blue Casual T-Shirt')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="T-Shirts" data-name="Green Polo T-Shirt">
+            <div class="product-image">
+                <span class="badge sale">SALE</span>
+                <img src="https://images.unsplash.com/photo-1625910513413-5fc45d5b3a99?auto=format&fit=crop&w=600&q=80"
+                     alt="Green Polo T-Shirt">
+            </div>
+            <div class="product-info">
+                <p>T-Shirts</p>
+                <h3>Green Polo T-Shirt</h3>
+                <div class="rating">★★★★☆</div>
+                <strong>₹999</strong>
+                <button onclick="addToCart('Green Polo T-Shirt')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="Jackets" data-name="Classic Denim Jacket">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+                     alt="Classic Denim Jacket">
+            </div>
+            <div class="product-info">
+                <p>Jackets</p>
+                <h3>Classic Denim Jacket</h3>
+                <div class="rating">★★★★★</div>
+                <strong>₹2,999</strong>
+                <button onclick="addToCart('Classic Denim Jacket')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="Jackets" data-name="Black Leather Jacket">
+            <div class="product-image">
+                <span class="badge">HOT</span>
+                <img src="https://images.unsplash.com/photo-1520975958225-8c9f0d6d3a35?auto=format&fit=crop&w=600&q=80"
+                     alt="Black Leather Jacket">
+            </div>
+            <div class="product-info">
+                <p>Jackets</p>
+                <h3>Black Leather Jacket</h3>
+                <div class="rating">★★★★★</div>
+                <strong>₹4,499</strong>
+                <button onclick="addToCart('Black Leather Jacket')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="Accessories" data-name="Classic Wrist Watch">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80"
+                     alt="Classic Wrist Watch">
+            </div>
+            <div class="product-info">
+                <p>Accessories</p>
+                <h3>Classic Wrist Watch</h3>
+                <div class="rating">★★★★☆</div>
+                <strong>₹1,499</strong>
+                <button onclick="addToCart('Classic Wrist Watch')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="Accessories" data-name="Leather Backpack">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+                     alt="Leather Backpack">
+            </div>
+            <div class="product-info">
+                <p>Accessories</p>
+                <h3>Leather Backpack</h3>
+                <div class="rating">★★★★★</div>
+                <strong>₹1,899</strong>
+                <button onclick="addToCart('Leather Backpack')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="Accessories" data-name="Classic Sunglasses">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+                     alt="Classic Sunglasses">
+            </div>
+            <div class="product-info">
+                <p>Accessories</p>
+                <h3>Classic Sunglasses</h3>
+                <div class="rating">★★★★☆</div>
+                <strong>₹1,299</strong>
+                <button onclick="addToCart('Classic Sunglasses')">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="noProducts" class="no-products">
+        <h2>No products found</h2>
+        <p>Try another search or category.</p>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div>
+        <h2>NOSTRA</h2>
+        <p>Your destination for modern fashion and lifestyle.</p>
+    </div>
+
+    <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+        <h3>Follow Us</h3>
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+</footer>
+
+<div class="copyright">
+    © 2026 Nostra. All Rights Reserved.
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
