@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-**Nostra Website:**
+**BOSS-FASHION STORE WEBSITE:**
  https://ajay9677.github.io/boss/
 ## 📄 Pages Included
 
